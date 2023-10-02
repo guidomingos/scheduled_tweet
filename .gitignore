@@ -30,8 +30,15 @@
 !/tmp/storage/.keep
 /tmp/*
 /tmp/cache/*
+/tmp/cache/
 
 /public/assets
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+tmp/cache/assets/sprockets/v4.0.0/3S/3SsPax6djDZoxoYC2ijMvNRuKUMppcaGBFvZidCD880.cache
+tmp/cache/assets/sprockets/v4.0.0/3S/3SsPax6djDZoxoYC2ijMvNRuKUMppcaGBFvZidCD880.cache
+tmp/cache/assets/sprockets/v4.0.0/3S/3SsPax6djDZoxoYC2ijMvNRuKUMppcaGBFvZidCD880.cache
+tmp/cache/assets/sprockets/v4.0.0/7b/7bCqHzkgOED5shsANd976jKYnUFaFy94OmnNlAu9gy4.cache
+.gitignore
+tmp/cache/bootsnap/load-path-cache
