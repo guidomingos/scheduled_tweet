@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   get "password/reset/edit", to: "password_resets#edit" 
   patch "password/reset/edit", to: "password_resets#update" 
 
+  get "users", to: "users#list", as: :list_users
+  delete "users", to: "users#destroy"
+  post "users", to: "users#update", as: :update_users
+
   root to: "main#index"
 
 end

@@ -1,0 +1,24 @@
+<h1> Edit your registration data </h1>
+
+<%= form_with model: Current.user, url: update_users_path, data: { turbo: false } do |form| %>
+    <% if form.object.errors.any? %>
+        <div class="alert alert-danger">
+            <% form.object.errors.full_messages.each do |message| %>
+                <div><%= message %></div>
+            <% end %>
+        </div>
+    <% end %>
+
+    <div class="mb-3">
+        <%= form.label :name %>
+        <%= form.password_field :name, class: "form-control", placeholder: "George Robert"  %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :email %>
+        <%= form.password_field :email, class: "form-control", placeholder: "george@gmail.com" %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit "Update registration data", class: "btn btn-primary" %>
+    </div>
+
+<% end %>
