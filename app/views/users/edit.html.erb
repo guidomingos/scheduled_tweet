@@ -1,6 +1,6 @@
-<h1> Edit your registration data </h1>
+<h1> Edit registration data </h1>
 
-<%= form_with model: Current.user, url: update_users_path, data: { turbo: false } do |form| %>
+<%= form_for @user, url: edit_users_path(@user), method: :patch, data: { turbo: false } do |form| %>
     <% if form.object.errors.any? %>
         <div class="alert alert-danger">
             <% form.object.errors.full_messages.each do |message| %>
@@ -11,14 +11,14 @@
 
     <div class="mb-3">
         <%= form.label :name %>
-        <%= form.password_field :name, class: "form-control", placeholder: "George Robert"  %>
+        <%= form.text_field :name, class: "form-control", placeholder: "George Robert"  %>
     </div>
     <div class="mb-3">
         <%= form.label :email %>
-        <%= form.password_field :email, class: "form-control", placeholder: "george@gmail.com" %>
+        <%= form.text_field :email, class: "form-control", placeholder: "george@gmail.com" %>
     </div>
     <div class="mb-3">
-        <%= form.submit "Update registration data", class: "btn btn-primary" %>
+        <%= form.submit "Update data", class: "btn btn-primary" %>
     </div>
 
 <% end %>
