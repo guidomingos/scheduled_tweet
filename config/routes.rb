@@ -21,7 +21,8 @@ Rails.application.routes.draw do
 
   get "users", to: "users#list", as: :list_users
   delete "users", to: "users#destroy"
-  post "users", to: "users#update", as: :update_users
+  get 'users/:id/edit', to: 'users#edit', as: :edit_users
+  patch 'users/:id/edit', to: 'users#update'
 
   root to: "main#index"
 

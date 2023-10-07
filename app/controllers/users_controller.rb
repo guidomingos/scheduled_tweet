@@ -1,7 +1,12 @@
-class UsersController < ApplicationController 
+class UsersController < ApplicationController  
     def index
+        @users = User.all
     end
-    
+   
+    def edit
+        @user = User.find(params[:id])
+    end
+
     def list
         @users = User.all
     end
@@ -17,10 +22,12 @@ class UsersController < ApplicationController
     end 
 
     def update
-        if Current.user.update(user_params)
-            redirect_to root_path, notice: "Registration data updated!"
+        @user = User.find_by(id: params[:id])
+        if @user.update(user_params)
+          redirect_to users_path, notice: 'Successfully updated the user'
         else
-            render :edit
+          flash[:alert] = 'Invalid email or password'
+          render :edit
         end
     end
 
