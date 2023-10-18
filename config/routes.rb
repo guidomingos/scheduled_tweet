@@ -24,6 +24,10 @@ Rails.application.routes.draw do
   get 'users/:id/edit', to: 'users#edit', as: :edit_users
   patch 'users/:id/edit', to: 'users#update'
 
+  get "auth/twitter/callback", to: "omniauth_callbacks#twitter"
+
+  resources :twitter_accounts
+
   root to: "main#index"
 
 end
