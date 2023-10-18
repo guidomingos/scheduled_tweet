@@ -43,3 +43,7 @@ tmp/cache/assets/sprockets/v4.0.0/7b/7bCqHzkgOED5shsANd976jKYnUFaFy94OmnNlAu9gy4
 .gitignore
 tmp/cache/bootsnap/load-path-cache
 log/development.log
+
+/config/credentials/development.key
+.DS_Store
+test/fixtures/twitter_accounts.yml
