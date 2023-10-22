@@ -5,9 +5,10 @@ class OmniauthCallbacksController < ApplicationController
         twitter_account.update(
             name: auth.info.name,
             image: auth.info.image,
-            token: auth.info.token,
-            secret: auth.info.secret,
+            token: auth.credentials.token,
+            secret: auth.credentials.secret,
         )
+        
 
         redirect_to twitter_accounts_path, notice: "Successfully connected your account"
     end
