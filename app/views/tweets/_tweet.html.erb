@@ -4,17 +4,24 @@
         <label><b><%= tweet.twitter_account.name %> </b></label>
         <%= link_to "@#{tweet.twitter_account.username}", "https://twitter.com/#{tweet.twitter_account.username}", target: :_blank %>
         <% if tweet.published? %>
-            <span class="badge bg-success">Published: <%= l tweet.publish_at, format: :short %></span>
+            <span class="badge bg-success"><i class="fa fa-check" aria-hidden="true"></i> <%= l tweet.publish_at, format: :short %></span>
             <BR>
             <%= tweet.body %>
             <BR> 
-            <%= link_to "View Tweet", "https://twitter.com/#{tweet.twitter_account.username}/status/#{tweet.tweet_id}", target: :_blank %>
+            <%= link_to "https://twitter.com/#{tweet.twitter_account.username}/status/#{tweet.tweet_id}", target: :_blank, id: "viewTweet" do %>
+            <i class="fa fa-twitter"></i>
+            View Tweet
+            <% end %>
         <% else %>
-            <span class="badge bg-info text-dark">Scheduled: <%= l tweet.publish_at, format: :short %></span>
+            <span class="badge bg-info text-dark"><i class="fa fa-calendar" aria-hidden="true"></i> <%= l tweet.publish_at, format: :short %></span>
             <BR>
             <%= tweet.body %>
             <BR> 
-            <%= link_to "Edit Tweet", edit_tweet_path(tweet) %>
+            <%= link_to edit_tweet_path(tweet), id: "editTweet" do %>
+            <i class="fa fa-pencil"></i>
+            Edit Tweet
+            <% end %>
+
         <% end %>
     </div>
 </div>

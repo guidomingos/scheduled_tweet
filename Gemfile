@@ -43,6 +43,7 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 gem "bootsnap", require: false
 
 gem "font-awesome-sass", "~> 6.4.2"
+gem "font-awesome-rails"
 
 
 # Use Sass to process CSS
