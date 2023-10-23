@@ -6,8 +6,13 @@ class Tweet < ApplicationRecord
   validates :publish_at, presence: true
 
   after_initialize do
-    #21 hours means 1 day less 3 hours.
-    self.publish_at ||= 21.hours.from_now
+    self.publish_at ||= 24.hours.from_now
+  end
+
+  after_save_commit do
+    if publish_at_previously_changed?
+      TweetJob.set(wait_until: publish_at).perform_later(self)
+    end
   end
 
   def published?
