@@ -1,24 +1,40 @@
-# README
+# Scheduled Tweet
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A straight forward application that allows you to create an account, login, forget password, connect to one or more Tweeter Accounts and schedule tweets to be posted afterwards.
 
-Things you may want to cover:
+# Getting Started
 
-* Ruby version
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-* System dependencies
+# Prerequisites
+* [Ruby] (https://www.ruby-lang.org/en/downloads/)
+* [Rails] (https://rubyonrails.org/)
+* [Bundler] (https://bundler.io/)
 
-* Configuration
+# Installation
 
-* Database creation
+1. Clone the repository: git clone git@github.com:guidomingos/scheduled-tweet.git
+2. Navigate to the directory: `cd scheduled-tweet`
+3. Install the required dependencies: `bundle install`
+4. Set up the database: `rails db:migrate
+5. Start the server rails server
 
-* Database initialization
+The server should now be running at http://localhost:3000.
 
-* How to run the test suite
+# Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+Local environment is set to use sqlite as database.
 
-* Deployment instructions
+# Next features / implementations
 
-* ...
+* Add a home page / About Page
+* Add a Footer
+* Add images to tweets
+* Integrate other social medias (LinkedIn, Instagram, Facebook, etc)
+
+# Contact
+
+* guilherme63@gmail.com 
+
+
+
