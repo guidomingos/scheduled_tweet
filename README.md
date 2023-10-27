@@ -17,7 +17,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. Navigate to the directory: `cd scheduled-tweet`
 3. Install the required dependencies: `bundle install`
 4. Set up the database: `rails db:migrate`
-5. Start the server rails server
+5. Start the server rails server `rails s`
 
 The server should now be running at http://localhost:3000.
 
