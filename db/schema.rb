@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_18_150820) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_27_123507) do
   create_table "tweets", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "twitter_account_id", null: false
@@ -41,6 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_18_150820) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name"
+    t.boolean "is_admin"
   end
 
   add_foreign_key "tweets", "twitter_accounts"
